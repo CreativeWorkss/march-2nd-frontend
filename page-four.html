@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Netflix Video Preview UI</title>
+
+    <style>
+      body {
+        margin: 0;
+        background: #141414;
+        font-family: Arial, sans-serif;
+        color: white;
+      }
+
+      h2 {
+        margin: 20px;
+      }
+
+      /* ROW */
+      .row {
+        display: flex;
+        overflow-x: auto;
+        gap: 15px;
+        padding: 20px;
+      }
+
+      .row::-webkit-scrollbar {
+        display: none;
+      }
+
+      /* CARD */
+      .card {
+        position: relative;
+        min-width: 200px;
+        height: 120px;
+        border-radius: 10px;
+        overflow: hidden;
+        flex-shrink: 0;
+        background: black;
+      }
+
+      /* IMAGE */
+      .card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: opacity 0.3s;
+      }
+
+      /* VIDEO */
+      .card video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+      }
+
+      /* HOVER EFFECT */
+      .card:hover video {
+        opacity: 1;
+      }
+
+      .card:hover img {
+        opacity: 0;
+      }
+
+      /* NAVBAR */
+      .header {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 20px;
+        background: black;
+      }
+
+      .menu {
+        display: flex;
+        gap: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <div class="header">
+      <div>MyFlix</div>
+      <div class="menu">
+        <span>Home</span>
+        <span>Movies</span>
+        <span>TV Shows</span>
+      </div>
+    </div>
+
+    <!-- ROW -->
+    <h2>Trending Now</h2>
+
+    <div class="row">
+      <div class="card">
+        <img src="https://picsum.photos/id/1011/400/250" />
+        <video
+          src="https://www.w3schools.com/html/mov_bbb.mp4"
+          muted
+          loop
+          autoplay
+        ></video>
+      </div>
+
+      <div class="card">
+        <img src="https://picsum.photos/id/1015/400/250" />
+        <video
+          src="https://www.w3schools.com/html/movie.mp4"
+          muted
+          loop
+          autoplay
+        ></video>
+      </div>
+
+      <div class="card">
+        <img src="https://picsum.photos/id/1016/400/250" />
+        <video
+          src="https://www.w3schools.com/html/mov_bbb.mp4"
+          muted
+          loop
+          autoplay
+        ></video>
+      </div>
+
+      <div class="card">
+        <img src="https://picsum.photos/id/1020/400/250" />
+        <video
+          src="https://www.w3schools.com/html/movie.mp4"
+          muted
+          loop
+          autoplay
+        ></video>
+      </div>
+    </div>
+  </body>
+</html>
