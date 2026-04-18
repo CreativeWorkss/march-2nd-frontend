@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Car Speedometer (Closure)</title>
+  </head>
+  <body>
+    <h1>🚗 Car Speedometer</h1>
+
+    <h2 id="speedDisplay">0 km/h</h2>
+
+    <button onclick="car.accelerate(10)">Accelerate +10</button>
+    <button onclick="car.brake(10)">Brake -10</button>
+
+    <script>
+      function carSpeedometer() {
+        let speed = 0; // private variable (closure)
+
+        function updateDisplay() {
+          document.getElementById("speedDisplay").innerText = speed + " km/h";
+        }
+
+        function accelerate(amount) {
+          speed += amount;
+          updateDisplay();
+        }
+
+        function brake(amount) {
+          speed -= amount;
+          if (speed < 0) speed = 0;
+          updateDisplay();
+        }
+
+        return {
+          accelerate,
+          brake,
+        };
+      }
+
+      const car = carSpeedometer();
+    </script>
+  </body>
+</html>

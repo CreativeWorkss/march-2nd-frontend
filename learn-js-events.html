@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>Learning JS events</title>
+  </head>
+  <body>
+    <h1 id="heading"></h1>
+
+    <label for="un">UserName</label>
+    <input type="text" id="un" name="un" onblur="handleBlur()" />
+    <button
+      onclick="handleClick()"
+      onmouseover="handleMouseOver()"
+      onmouseout="handleMouseOut()"
+    >
+      Submit
+    </button>
+    <p id="blur" style="color: red"></p>
+    <script>
+      function handleClick() {
+        document.getElementById("heading").innerHTML = "Hello";
+      }
+
+      function handleMouseOver() {
+        document.getElementById("heading").innerHTML = "Mouse over on button";
+      }
+
+      function handleMouseOut() {
+        document.getElementById("heading").innerHTML = "I am moving out";
+      }
+
+      function handleBlur() {
+        document.getElementById("blur").innerHTML = "Fill the field";
+      }
+    </script>
+  </body>
+</html>
