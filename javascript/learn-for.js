@@ -18,4 +18,5 @@ for (let num of score) {
   if (num >= 75) {
     console.log("its a distinction", num);
   }
+  d;
 }

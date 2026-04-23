@@ -1,3 +1,6 @@
+// closure is process / method of retaining outer
+// variable value even after outer function is closed
+
 function outer() {
   let value = 0;
 
